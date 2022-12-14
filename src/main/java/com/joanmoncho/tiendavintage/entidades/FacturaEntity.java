@@ -10,11 +10,11 @@ public class FacturaEntity {
     @Column(name = "idfactura", nullable = false)
     private int idfactura;
     @Basic
-    @Column(name = "cliente_idcliente", nullable = false)
-    private int clienteIdcliente;
+    @Column(name = "idmetodo pago", nullable = false)
+    private int idmetodoPago;
     @Basic
-    @Column(name = "metodo pago_idmetodo pago", nullable = false)
-    private int metodoPagoIdmetodoPago;
+    @Column(name = "idusuario", nullable = false)
+    private int idusuario;
 
     public int getIdfactura() {
         return idfactura;
@@ -24,20 +24,20 @@ public class FacturaEntity {
         this.idfactura = idfactura;
     }
 
-    public int getClienteIdcliente() {
-        return clienteIdcliente;
+    public int getIdmetodoPago() {
+        return idmetodoPago;
     }
 
-    public void setClienteIdcliente(int clienteIdcliente) {
-        this.clienteIdcliente = clienteIdcliente;
+    public void setIdmetodoPago(int idmetodoPago) {
+        this.idmetodoPago = idmetodoPago;
     }
 
-    public int getMetodoPagoIdmetodoPago() {
-        return metodoPagoIdmetodoPago;
+    public int getIdusuario() {
+        return idusuario;
     }
 
-    public void setMetodoPagoIdmetodoPago(int metodoPagoIdmetodoPago) {
-        this.metodoPagoIdmetodoPago = metodoPagoIdmetodoPago;
+    public void setIdusuario(int idusuario) {
+        this.idusuario = idusuario;
     }
 
     @Override
@@ -48,8 +48,8 @@ public class FacturaEntity {
         FacturaEntity that = (FacturaEntity) o;
 
         if (idfactura != that.idfactura) return false;
-        if (clienteIdcliente != that.clienteIdcliente) return false;
-        if (metodoPagoIdmetodoPago != that.metodoPagoIdmetodoPago) return false;
+        if (idmetodoPago != that.idmetodoPago) return false;
+        if (idusuario != that.idusuario) return false;
 
         return true;
     }
@@ -57,8 +57,8 @@ public class FacturaEntity {
     @Override
     public int hashCode() {
         int result = idfactura;
-        result = 31 * result + clienteIdcliente;
-        result = 31 * result + metodoPagoIdmetodoPago;
+        result = 31 * result + idmetodoPago;
+        result = 31 * result + idusuario;
         return result;
     }
 }

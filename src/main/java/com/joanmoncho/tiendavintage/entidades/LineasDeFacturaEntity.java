@@ -19,11 +19,11 @@ public class LineasDeFacturaEntity {
     @Column(name = "precio", nullable = true, precision = 0)
     private Double precio;
     @Basic
-    @Column(name = "factura_idfactura", nullable = false)
-    private int facturaIdfactura;
+    @Column(name = "idfactura", nullable = false)
+    private int idfactura;
     @Basic
-    @Column(name = "producto_idproducto", nullable = false)
-    private int productoIdproducto;
+    @Column(name = "idproducto", nullable = false)
+    private int idproducto;
 
     public int getIdlineasDeFactura() {
         return idlineasDeFactura;
@@ -57,20 +57,20 @@ public class LineasDeFacturaEntity {
         this.precio = precio;
     }
 
-    public int getFacturaIdfactura() {
-        return facturaIdfactura;
+    public int getIdfactura() {
+        return idfactura;
     }
 
-    public void setFacturaIdfactura(int facturaIdfactura) {
-        this.facturaIdfactura = facturaIdfactura;
+    public void setIdfactura(int idfactura) {
+        this.idfactura = idfactura;
     }
 
-    public int getProductoIdproducto() {
-        return productoIdproducto;
+    public int getIdproducto() {
+        return idproducto;
     }
 
-    public void setProductoIdproducto(int productoIdproducto) {
-        this.productoIdproducto = productoIdproducto;
+    public void setIdproducto(int idproducto) {
+        this.idproducto = idproducto;
     }
 
     @Override
@@ -81,8 +81,8 @@ public class LineasDeFacturaEntity {
         LineasDeFacturaEntity that = (LineasDeFacturaEntity) o;
 
         if (idlineasDeFactura != that.idlineasDeFactura) return false;
-        if (facturaIdfactura != that.facturaIdfactura) return false;
-        if (productoIdproducto != that.productoIdproducto) return false;
+        if (idfactura != that.idfactura) return false;
+        if (idproducto != that.idproducto) return false;
         if (lineas != null ? !lineas.equals(that.lineas) : that.lineas != null) return false;
         if (cantidad != null ? !cantidad.equals(that.cantidad) : that.cantidad != null) return false;
         if (precio != null ? !precio.equals(that.precio) : that.precio != null) return false;
@@ -96,8 +96,8 @@ public class LineasDeFacturaEntity {
         result = 31 * result + (lineas != null ? lineas.hashCode() : 0);
         result = 31 * result + (cantidad != null ? cantidad.hashCode() : 0);
         result = 31 * result + (precio != null ? precio.hashCode() : 0);
-        result = 31 * result + facturaIdfactura;
-        result = 31 * result + productoIdproducto;
+        result = 31 * result + idfactura;
+        result = 31 * result + idproducto;
         return result;
     }
 }

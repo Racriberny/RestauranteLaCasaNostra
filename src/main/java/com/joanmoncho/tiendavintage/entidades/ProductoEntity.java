@@ -24,6 +24,15 @@ public class ProductoEntity {
     @Basic
     @Column(name = "marca_idmarca", nullable = false)
     private int marcaIdmarca;
+    @Basic
+    @Column(name = "idtipo seccion", nullable = false)
+    private int idtipoSeccion;
+    @Basic
+    @Column(name = "idtalla", nullable = false)
+    private int idtalla;
+    @Basic
+    @Column(name = "idtipo producto", nullable = false)
+    private int idtipoProducto;
 
     public int getIdproducto() {
         return idproducto;
@@ -73,6 +82,30 @@ public class ProductoEntity {
         this.marcaIdmarca = marcaIdmarca;
     }
 
+    public int getIdtipoSeccion() {
+        return idtipoSeccion;
+    }
+
+    public void setIdtipoSeccion(int idtipoSeccion) {
+        this.idtipoSeccion = idtipoSeccion;
+    }
+
+    public int getIdtalla() {
+        return idtalla;
+    }
+
+    public void setIdtalla(int idtalla) {
+        this.idtalla = idtalla;
+    }
+
+    public int getIdtipoProducto() {
+        return idtipoProducto;
+    }
+
+    public void setIdtipoProducto(int idtipoProducto) {
+        this.idtipoProducto = idtipoProducto;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -83,6 +116,9 @@ public class ProductoEntity {
         if (idproducto != that.idproducto) return false;
         if (equipoIdequipo != that.equipoIdequipo) return false;
         if (marcaIdmarca != that.marcaIdmarca) return false;
+        if (idtipoSeccion != that.idtipoSeccion) return false;
+        if (idtalla != that.idtalla) return false;
+        if (idtipoProducto != that.idtipoProducto) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
         if (talla != null ? !talla.equals(that.talla) : that.talla != null) return false;
         if (materiales != null ? !materiales.equals(that.materiales) : that.materiales != null) return false;
@@ -98,6 +134,9 @@ public class ProductoEntity {
         result = 31 * result + (materiales != null ? materiales.hashCode() : 0);
         result = 31 * result + equipoIdequipo;
         result = 31 * result + marcaIdmarca;
+        result = 31 * result + idtipoSeccion;
+        result = 31 * result + idtalla;
+        result = 31 * result + idtipoProducto;
         return result;
     }
 }

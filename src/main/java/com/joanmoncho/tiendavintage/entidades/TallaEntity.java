@@ -12,9 +12,6 @@ public class TallaEntity {
     @Basic
     @Column(name = "nombre", nullable = true, length = 1)
     private String nombre;
-    @Basic
-    @Column(name = "producto_idproducto", nullable = false)
-    private int productoIdproducto;
 
     public int getIdtalla() {
         return idtalla;
@@ -32,14 +29,6 @@ public class TallaEntity {
         this.nombre = nombre;
     }
 
-    public int getProductoIdproducto() {
-        return productoIdproducto;
-    }
-
-    public void setProductoIdproducto(int productoIdproducto) {
-        this.productoIdproducto = productoIdproducto;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -48,7 +37,6 @@ public class TallaEntity {
         TallaEntity that = (TallaEntity) o;
 
         if (idtalla != that.idtalla) return false;
-        if (productoIdproducto != that.productoIdproducto) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
 
         return true;
@@ -58,7 +46,6 @@ public class TallaEntity {
     public int hashCode() {
         int result = idtalla;
         result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
-        result = 31 * result + productoIdproducto;
         return result;
     }
 }

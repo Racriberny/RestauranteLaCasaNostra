@@ -16,8 +16,8 @@ public class EquipoEntity {
     @Column(name = "nacionalidad", nullable = true)
     private Byte nacionalidad;
     @Basic
-    @Column(name = "liga_idliga", nullable = false)
-    private int ligaIdliga;
+    @Column(name = "idliga", nullable = false)
+    private int idliga;
 
     public int getIdequipo() {
         return idequipo;
@@ -43,12 +43,12 @@ public class EquipoEntity {
         this.nacionalidad = nacionalidad;
     }
 
-    public int getLigaIdliga() {
-        return ligaIdliga;
+    public int getIdliga() {
+        return idliga;
     }
 
-    public void setLigaIdliga(int ligaIdliga) {
-        this.ligaIdliga = ligaIdliga;
+    public void setIdliga(int idliga) {
+        this.idliga = idliga;
     }
 
     @Override
@@ -59,7 +59,7 @@ public class EquipoEntity {
         EquipoEntity that = (EquipoEntity) o;
 
         if (idequipo != that.idequipo) return false;
-        if (ligaIdliga != that.ligaIdliga) return false;
+        if (idliga != that.idliga) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
         if (nacionalidad != null ? !nacionalidad.equals(that.nacionalidad) : that.nacionalidad != null) return false;
 
@@ -71,7 +71,7 @@ public class EquipoEntity {
         int result = idequipo;
         result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
         result = 31 * result + (nacionalidad != null ? nacionalidad.hashCode() : 0);
-        result = 31 * result + ligaIdliga;
+        result = 31 * result + idliga;
         return result;
     }
 }

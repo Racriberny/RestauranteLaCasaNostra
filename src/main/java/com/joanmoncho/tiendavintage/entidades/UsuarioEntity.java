@@ -7,8 +7,8 @@ import jakarta.persistence.*;
 public class UsuarioEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
-    @Column(name = "idlogin", nullable = false)
-    private int idlogin;
+    @Column(name = "idusuario", nullable = false)
+    private int idusuario;
     @Basic
     @Column(name = "nombre", nullable = true, length = 45)
     private String nombre;
@@ -18,16 +18,13 @@ public class UsuarioEntity {
     @Basic
     @Column(name = "contraseña", nullable = true, length = 45)
     private String contraseña;
-    @Basic
-    @Column(name = "cliente_idcliente", nullable = false)
-    private int clienteIdcliente;
 
-    public int getIdlogin() {
-        return idlogin;
+    public int getIdusuario() {
+        return idusuario;
     }
 
-    public void setIdlogin(int idlogin) {
-        this.idlogin = idlogin;
+    public void setIdusuario(int idusuario) {
+        this.idusuario = idusuario;
     }
 
     public String getNombre() {
@@ -54,14 +51,6 @@ public class UsuarioEntity {
         this.contraseña = contraseña;
     }
 
-    public int getClienteIdcliente() {
-        return clienteIdcliente;
-    }
-
-    public void setClienteIdcliente(int clienteIdcliente) {
-        this.clienteIdcliente = clienteIdcliente;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -69,8 +58,7 @@ public class UsuarioEntity {
 
         UsuarioEntity that = (UsuarioEntity) o;
 
-        if (idlogin != that.idlogin) return false;
-        if (clienteIdcliente != that.clienteIdcliente) return false;
+        if (idusuario != that.idusuario) return false;
         if (nombre != null ? !nombre.equals(that.nombre) : that.nombre != null) return false;
         if (email != null ? !email.equals(that.email) : that.email != null) return false;
         if (contraseña != null ? !contraseña.equals(that.contraseña) : that.contraseña != null) return false;
@@ -80,11 +68,10 @@ public class UsuarioEntity {
 
     @Override
     public int hashCode() {
-        int result = idlogin;
+        int result = idusuario;
         result = 31 * result + (nombre != null ? nombre.hashCode() : 0);
         result = 31 * result + (email != null ? email.hashCode() : 0);
         result = 31 * result + (contraseña != null ? contraseña.hashCode() : 0);
-        result = 31 * result + clienteIdcliente;
         return result;
     }
 }
