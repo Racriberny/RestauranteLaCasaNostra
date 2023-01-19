@@ -10,15 +10,13 @@
           crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <script th:src="@{/js/menuizquierdo.js}"></script>
-    <script th:src="@{/js/selectorimagen.js}"></script>
-    <script th:src="@{/js/sliders}"></script>
+    <script th:src="@{/js/slider.js}"></script>
+
 </head>
 <body>
 
-    <header th:replace="menus/mismenus"></header>
-    <section th:replace="sliders/slider"></section>
-
-
+    <header th:replace="~{menus/mismenus}"></header>
+    <section th:replace="~{sliders/slider}"></section>
 
 
 <!--

@@ -58,7 +58,7 @@ body{
     height: 100vh;
     position: fixed;
     width: 0;
-    z-index: 1;
+    z-index: 100;
     top: 0;
     left: 0;
     background: #996d0f;
@@ -181,7 +181,7 @@ body{
 }
 .btn-shop{
     display: block;
-    border: 2px solid #FF4E00;
+    border: 2px solid white;
     color: white;
     padding: 10px;
     text-align: center;
@@ -191,8 +191,8 @@ body{
     transition: all 0.5s;
 }
 .btn-shop:hover{
-    background: #FF4E00;
-    color: white;
+    background: white;
+    color: black;
 }
 
 
