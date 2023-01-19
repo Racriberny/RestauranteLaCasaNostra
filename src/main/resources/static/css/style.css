@@ -1,5 +1,5 @@
 body{
-    background-color: #cfab5f;
+    background-color: #a68233;
     font-family: sans-serif;
     cursor: pointer;
 
@@ -19,7 +19,7 @@ body{
 .derecha {
     position: relative;
     text-decoration: none;
-    color: #222;
+    color: #3c3c3c;
     font-size: 18px;
     letter-spacing: .5px;
     padding: 0 20px;
@@ -32,7 +32,7 @@ body{
     position: absolute;
     height: 3px;
     width: 0;
-    background: black;
+    background: #3c3c3c;
     transition: .5s;
 }
 .derecha:after{
