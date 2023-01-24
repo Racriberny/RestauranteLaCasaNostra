@@ -5,8 +5,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class MiControlador {
-    @GetMapping("/login")
+    @GetMapping("/home")
     public String indice(){
-        return "login/login";
+        return "index";
+    }
+    @GetMapping("/carta")
+    public String carta(){
+        return "Carta/carta";
     }
 }
