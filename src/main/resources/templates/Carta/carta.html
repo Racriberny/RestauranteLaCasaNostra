@@ -1,10 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+<header th:replace="~{menus/mismenus}"></header>
 <body>
-<p>Prueba</p>
+<div class="contenedor">
+<div class="banner">
+    <div class="capa"></div>
+    <div class="info">
+        <h1>Bienvenido a La Casa Nostra</h1>
+        <p>Hola buenas has entrado la parte de la carta de nuestro restaurante
+        para ver todo la carta la carta completa presiones donde pone carta</p>
+        <a href="#">Carta</a>
+    </div>
+</div>
+</div>
 </body>
-</html>
+<section th:replace="~{footer/footer}"></section>
